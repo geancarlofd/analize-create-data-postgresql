@@ -1,0 +1,680 @@
+{
+  "acessos": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "usuario_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "usuarios.id"
+    },
+    {
+      "column": "ip",
+      "type": "character varying",
+      "length": 45,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "user_agent",
+      "type": "text",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "data_acesso",
+      "type": "timestamp without time zone",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "avaliacoes": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "usuario_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "usuarios.id"
+    },
+    {
+      "column": "produto_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "produtos.id"
+    },
+    {
+      "column": "nota",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "comentario",
+      "type": "text",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "data_avaliacao",
+      "type": "timestamp without time zone",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "carrinho_itens": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "carrinho_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "carrinhos.id"
+    },
+    {
+      "column": "produto_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "produtos.id"
+    },
+    {
+      "column": "quantidade",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "carrinhos": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "usuario_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "usuarios.id"
+    },
+    {
+      "column": "data_criacao",
+      "type": "timestamp without time zone",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "categorias": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "nome",
+      "type": "character varying",
+      "length": 50,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "descricao",
+      "type": "text",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "cupons": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "codigo",
+      "type": "character varying",
+      "length": 20,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "desconto_percentual",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "valido_ate",
+      "type": "date",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "cupons_pedidos": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "pedido_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "pedidos.id"
+    },
+    {
+      "column": "cupom_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "cupons.id"
+    }
+  ],
+  "enderecos": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "usuario_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "usuarios.id"
+    },
+    {
+      "column": "rua",
+      "type": "character varying",
+      "length": 150,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "numero",
+      "type": "character varying",
+      "length": 10,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "complemento",
+      "type": "character varying",
+      "length": 50,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "cidade",
+      "type": "character varying",
+      "length": 100,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "estado",
+      "type": "character",
+      "length": 2,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "cep",
+      "type": "character varying",
+      "length": 10,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "imagens_produto": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "produto_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "produtos.id"
+    },
+    {
+      "column": "url",
+      "type": "text",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "legenda",
+      "type": "text",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "notificacoes": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "usuario_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "usuarios.id"
+    },
+    {
+      "column": "mensagem",
+      "type": "text",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "lida",
+      "type": "boolean",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "data_envio",
+      "type": "timestamp without time zone",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "pagamentos": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "pedido_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "pedidos.id"
+    },
+    {
+      "column": "forma_pagamento",
+      "type": "character varying",
+      "length": 50,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "valor",
+      "type": "numeric",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "status",
+      "type": "character varying",
+      "length": 50,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "data_pagamento",
+      "type": "timestamp without time zone",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "pedido_itens": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "pedido_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "pedidos.id"
+    },
+    {
+      "column": "produto_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "produtos.id"
+    },
+    {
+      "column": "quantidade",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "preco_unitario",
+      "type": "numeric",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "pedidos": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "usuario_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "usuarios.id"
+    },
+    {
+      "column": "endereco_entrega_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "enderecos.id"
+    },
+    {
+      "column": "data_pedido",
+      "type": "timestamp without time zone",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "status",
+      "type": "character varying",
+      "length": 50,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ],
+  "produtos": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "nome",
+      "type": "character varying",
+      "length": 100,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "descricao",
+      "type": "text",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "preco",
+      "type": "numeric",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "estoque",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "categoria_id",
+      "type": "integer",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "references": "categorias.id"
+    }
+  ],
+  "usuarios": [
+    {
+      "column": "id",
+      "type": "integer",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "nome",
+      "type": "character varying",
+      "length": 100,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "email",
+      "type": "character varying",
+      "length": 100,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "senha_hash",
+      "type": "text",
+      "length": null,
+      "nullable": "NO",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    },
+    {
+      "column": "data_cadastro",
+      "type": "timestamp without time zone",
+      "length": null,
+      "nullable": "YES",
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "references": null
+    }
+  ]
+}

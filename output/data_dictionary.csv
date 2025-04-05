@@ -1,0 +1,73 @@
+Tabela,Coluna,Tipo,Tamanho,Pode ser nulo?,Chave Primária,Chave Estrangeira,Referência
+acessos,id,integer,,NO,Sim,Não,
+acessos,usuario_id,integer,,YES,Não,Sim,usuarios.id
+acessos,ip,character varying,45,YES,Não,Não,
+acessos,user_agent,text,,YES,Não,Não,
+acessos,data_acesso,timestamp without time zone,,YES,Não,Não,
+avaliacoes,id,integer,,NO,Sim,Não,
+avaliacoes,usuario_id,integer,,YES,Não,Sim,usuarios.id
+avaliacoes,produto_id,integer,,YES,Não,Sim,produtos.id
+avaliacoes,nota,integer,,YES,Não,Não,
+avaliacoes,comentario,text,,YES,Não,Não,
+avaliacoes,data_avaliacao,timestamp without time zone,,YES,Não,Não,
+carrinho_itens,id,integer,,NO,Sim,Não,
+carrinho_itens,carrinho_id,integer,,YES,Não,Sim,carrinhos.id
+carrinho_itens,produto_id,integer,,YES,Não,Sim,produtos.id
+carrinho_itens,quantidade,integer,,NO,Não,Não,
+carrinhos,id,integer,,NO,Sim,Não,
+carrinhos,usuario_id,integer,,YES,Não,Sim,usuarios.id
+carrinhos,data_criacao,timestamp without time zone,,YES,Não,Não,
+categorias,id,integer,,NO,Sim,Não,
+categorias,nome,character varying,50,NO,Não,Não,
+categorias,descricao,text,,YES,Não,Não,
+cupons,id,integer,,NO,Sim,Não,
+cupons,codigo,character varying,20,YES,Não,Não,
+cupons,desconto_percentual,integer,,YES,Não,Não,
+cupons,valido_ate,date,,YES,Não,Não,
+cupons_pedidos,id,integer,,NO,Sim,Não,
+cupons_pedidos,pedido_id,integer,,YES,Não,Sim,pedidos.id
+cupons_pedidos,cupom_id,integer,,YES,Não,Sim,cupons.id
+enderecos,id,integer,,NO,Sim,Não,
+enderecos,usuario_id,integer,,YES,Não,Sim,usuarios.id
+enderecos,rua,character varying,150,YES,Não,Não,
+enderecos,numero,character varying,10,YES,Não,Não,
+enderecos,complemento,character varying,50,YES,Não,Não,
+enderecos,cidade,character varying,100,YES,Não,Não,
+enderecos,estado,character,2,YES,Não,Não,
+enderecos,cep,character varying,10,YES,Não,Não,
+imagens_produto,id,integer,,NO,Sim,Não,
+imagens_produto,produto_id,integer,,YES,Não,Sim,produtos.id
+imagens_produto,url,text,,NO,Não,Não,
+imagens_produto,legenda,text,,YES,Não,Não,
+notificacoes,id,integer,,NO,Sim,Não,
+notificacoes,usuario_id,integer,,YES,Não,Sim,usuarios.id
+notificacoes,mensagem,text,,NO,Não,Não,
+notificacoes,lida,boolean,,YES,Não,Não,
+notificacoes,data_envio,timestamp without time zone,,YES,Não,Não,
+pagamentos,id,integer,,NO,Sim,Não,
+pagamentos,pedido_id,integer,,YES,Não,Sim,pedidos.id
+pagamentos,forma_pagamento,character varying,50,YES,Não,Não,
+pagamentos,valor,numeric,,YES,Não,Não,
+pagamentos,status,character varying,50,YES,Não,Não,
+pagamentos,data_pagamento,timestamp without time zone,,YES,Não,Não,
+pedido_itens,id,integer,,NO,Sim,Não,
+pedido_itens,pedido_id,integer,,YES,Não,Sim,pedidos.id
+pedido_itens,produto_id,integer,,YES,Não,Sim,produtos.id
+pedido_itens,quantidade,integer,,NO,Não,Não,
+pedido_itens,preco_unitario,numeric,,NO,Não,Não,
+pedidos,id,integer,,NO,Sim,Não,
+pedidos,usuario_id,integer,,YES,Não,Sim,usuarios.id
+pedidos,endereco_entrega_id,integer,,YES,Não,Sim,enderecos.id
+pedidos,data_pedido,timestamp without time zone,,YES,Não,Não,
+pedidos,status,character varying,50,YES,Não,Não,
+produtos,id,integer,,NO,Sim,Não,
+produtos,nome,character varying,100,NO,Não,Não,
+produtos,descricao,text,,YES,Não,Não,
+produtos,preco,numeric,,NO,Não,Não,
+produtos,estoque,integer,,NO,Não,Não,
+produtos,categoria_id,integer,,YES,Não,Sim,categorias.id
+usuarios,id,integer,,NO,Sim,Não,
+usuarios,nome,character varying,100,NO,Não,Não,
+usuarios,email,character varying,100,NO,Não,Não,
+usuarios,senha_hash,text,,NO,Não,Não,
+usuarios,data_cadastro,timestamp without time zone,,YES,Não,Não,
