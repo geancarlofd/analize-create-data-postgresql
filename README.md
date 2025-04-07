@@ -1,10 +1,10 @@
-📊 Analize Create Data PostgreSQL
+# 📊 Analize Create Data PostgreSQL
 
 Este projeto é uma aplicação Python que analisa o esquema de um banco de dados PostgreSQL e gera um dicionário de dados em formatos JSON e CSV. Ele é útil para documentar e entender a estrutura de tabelas, colunas, tipos de dados, chaves primárias e estrangeiras, além de outras informações relevantes do banco de dados.
 
 ---
 
-🚀 Funcionalidades
+## 🚀 Funcionalidades
 
 🔌 Conexão com um banco de dados PostgreSQL.
 
@@ -19,7 +19,7 @@ Este projeto é uma aplicação Python que analisa o esquema de um banco de dado
 
 ---
 
-🧾 Geração de um dicionário de dados em dois formatos:
+## 🧾 Geração de um dicionário de dados em dois formatos:
 
 JSON: output/data_dictionary.json
 
@@ -27,7 +27,7 @@ CSV: output/data_dictionary.csv
 
 ---
 
-📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 .
 ├── ai/
 │   └── describer.py             # (Em desenvolvimento)
@@ -51,7 +51,7 @@ CSV: output/data_dictionary.csv
 
 ---
 
-⚙️ Pré-requisitos
+## ⚙️ Pré-requisitos
 
 - Python 3.11 ou superior
 - Docker e Docker Compose
@@ -59,7 +59,7 @@ CSV: output/data_dictionary.csv
 
 ---
 
-🛠️ Configuração
+## 🛠️ Configuração
 
 1. Clone o repositório:
 > git clone <url-do-repositorio>
@@ -84,7 +84,7 @@ DB_PASSWORD=password_access
 
 ---
 
-▶️ Uso
+## ▶️ Uso
 
 Execute o script principal:
 
@@ -106,7 +106,7 @@ Com relacionamentos bem definidos entre elas.
 
 ---
 
-🧰 Tecnologias Utilizadas
+## 🧰 Tecnologias Utilizadas
 
 - Python: Linguagem principal do projeto
 - PostgreSQL: Banco de dados relacional
@@ -116,13 +116,13 @@ Com relacionamentos bem definidos entre elas.
 
 ---
 
-🤝 Contribuição
+## 🤝 Contribuição
 
 Contribuições são bem-vindas!Sinta-se à vontade para abrir issues ou enviar pull requests.
 
 ---
 
-📄 Licença
+## 📄 Licença
 
 Este projeto está licenciado sob a licença MIT.
 
