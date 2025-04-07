@@ -58,8 +58,10 @@ CSV: output/data_dictionary.csv
 ## 🛠️ Configuração
 
 1. Clone o repositório:
-> git clone <url-do-repositorio>
-> cd analize-create-data-postgresql
+```bash
+git clone <url-do-repositorio>
+cd analize-create-data-postgresql
+```
 
 2.Configure o arquivo .env com as credenciais do banco de dados:
 
@@ -73,17 +75,22 @@ DB_PASSWORD=password_access
 
 3. Instale as dependências:
 
-> pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
 
 4. (Opcional) Configure o banco de dados usando o Docker Compose:
-> docker-compose up -d
 
+```bash
+docker-compose up -d
+```
 
 ## ▶️ Uso
 
 Execute o script principal:
-
-> python main.py
+```bash
+python main.py
+```
 
 Após a execução, os arquivos data_dictionary.json e data_dictionary.csv serão gerados no diretório output/.
 
