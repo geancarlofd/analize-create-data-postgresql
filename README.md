@@ -25,6 +25,7 @@ CSV: output/data_dictionary.csv
 
 
 ## 📁 Estrutura do Projeto
+```text
 .
 ├── ai/
 │   └── describer.py             # (Em desenvolvimento)
@@ -45,7 +46,7 @@ CSV: output/data_dictionary.csv
 ├── main.py                      # Arquivo principal que orquestra a execução do projeto.
 ├── requirements.txt             # Dependências do projeto.
 └── .env                         # Configurações de ambiente.
-
+```
 
 ## ⚙️ Pré-requisitos
 
