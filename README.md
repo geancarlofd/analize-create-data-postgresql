@@ -2,7 +2,6 @@
 
 Este projeto é uma aplicação Python que analisa o esquema de um banco de dados PostgreSQL e gera um dicionário de dados em formatos JSON e CSV. Ele é útil para documentar e entender a estrutura de tabelas, colunas, tipos de dados, chaves primárias e estrangeiras, além de outras informações relevantes do banco de dados.
 
----
 
 ## 🚀 Funcionalidades
 
@@ -17,7 +16,6 @@ Este projeto é uma aplicação Python que analisa o esquema de um banco de dado
 - Chaves primárias
 - Chaves estrangeiras
 
----
 
 ## 🧾 Geração de um dicionário de dados em dois formatos:
 
@@ -25,7 +23,6 @@ JSON: output/data_dictionary.json
 
 CSV: output/data_dictionary.csv
 
----
 
 ## 📁 Estrutura do Projeto
 .
@@ -49,7 +46,6 @@ CSV: output/data_dictionary.csv
 ├── requirements.txt             # Dependências do projeto.
 └── .env                         # Configurações de ambiente.
 
----
 
 ## ⚙️ Pré-requisitos
 
@@ -57,7 +53,6 @@ CSV: output/data_dictionary.csv
 - Docker e Docker Compose
 - PostgreSQL
 
----
 
 ## 🛠️ Configuração
 
@@ -82,7 +77,6 @@ DB_PASSWORD=password_access
 4. (Opcional) Configure o banco de dados usando o Docker Compose:
 > docker-compose up -d
 
----
 
 ## ▶️ Uso
 
@@ -92,7 +86,6 @@ Execute o script principal:
 
 Após a execução, os arquivos data_dictionary.json e data_dictionary.csv serão gerados no diretório output/.
 
----
 
 🗃️ Estrutura do Banco de Dados
 
@@ -104,7 +97,6 @@ O banco de dados é definido no arquivo db_base.sql e inclui tabelas como:
 
 Com relacionamentos bem definidos entre elas.
 
----
 
 ## 🧰 Tecnologias Utilizadas
 
@@ -114,16 +106,13 @@ Com relacionamentos bem definidos entre elas.
 - psycopg2: Biblioteca para conexão com o PostgreSQL
 - python-dotenv: Gerenciamento de variáveis de ambiente
 
----
 
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas!Sinta-se à vontade para abrir issues ou enviar pull requests.
 
----
 
 ## 📄 Licença
 
 Este projeto está licenciado sob a licença MIT.
 
----
